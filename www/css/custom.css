@@ -1,0 +1,24 @@
+
+
+#swipe{
+	color: black;
+	margin-top: 30px;
+}
+
+#pause_button {
+	margin: 10px auto;
+	display: none;
+}
+
+#play_button {
+	margin: 10px auto;
+	display:block;
+}
+
+#pause_button {
+	display: block;
+}
+
+#play_button {
+	display:none;
+}
