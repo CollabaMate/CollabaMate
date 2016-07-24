@@ -28,29 +28,46 @@
 
 // // Record audio
 // //
+var src = "myrecording.mp3";
+var mediaRec = new Media(src, onSuccess, onError);
+var recstop = false;
+
 function recordAudio() {
-    var src = "myrecording.mp3";
-    var mediaRec = new Media(src, onSuccess, onError);
+    mediaRec = new Media(src, onSuccess, onError);
 
     // Record audio
     mediaRec.startRecord();
 
-    // Stop recording after 10 sec
-    var recTime = 0;
+    // Stop recording after 30 sec
+    recTime = 30;
     var recInterval = setInterval(function() {
-        recTime = recTime + 1;
-        setAudioPosition(recTime + " sec");
-        if (recTime >= 10) {
+        if(recstop){
+            setAudioPosition("");
+            return;
+        }
+        recTime = recTime - 0.1;
+        setAudioPosition(recTime.toFixed(1) + " sec");
+        if (recTime <= 0) {
             clearInterval(recInterval);
             mediaRec.stopRecord();
         }
-    }, 1000);
+    }, 100);
 }
 
 // Cordova is ready
 //
-function captureclick() {
+function startrecord() {
+    document.getElementById("start_record").className = 'record_hide';
+    document.getElementById("stop_record").className = 'record_show';
+    recstop = false;
     recordAudio();
+}
+
+function stoprecord() {
+    document.getElementById("start_record").className = 'record_show';
+    document.getElementById("stop_record").className = 'record_hide';
+    recstop = true;
+    mediaRec.stopRecord();
 }
 
 // onSuccess Callback

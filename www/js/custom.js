@@ -18,7 +18,7 @@ document.addEventListener('deviceready', function() {
 
 
 		// play the audio when page loads
-		$('#audio').get(0).play();
+		$('#audio').get(0).pause();
 
 	   // User swipes right to indicate interest 
 	  $("body").on("swiperight", function() {
@@ -35,17 +35,23 @@ document.addEventListener('deviceready', function() {
 	    // Toggle the buttons on click
 	    $('#play_button').click(function() {
 
-	    		$("button#pause_button").show();
-	    		$("button#play_button").hide();
-	    		$('#audio').get(0).play();
+	    		// $("img#pause_button").show();
+	    		// $("img#play_button").hide();
+			document.getElementById("play_button").className = 'button_hide';
+			document.getElementById("pause_button").className = 'button_show';
+			$('#audio').get(0).play();
+			document.getElementById("disc").className = 'rotating';
 	    		        
 	    });
 
 	    $('#pause_button').click(function() {
 
-	    		$("button#pause_button").hide();
-	    		$("button#play_button").show();
-	    		$('#audio').get(0).pause();
+	    		// $("img#pause_button").hide();
+	    		// $("img#play_button").show();
+			document.getElementById("play_button").className = 'button_show';
+			document.getElementById("pause_button").className = 'button_hide';
+			$('#audio').get(0).pause();
+			document.getElementById("disc").className = 'stop';
 	    	
 	    });
 

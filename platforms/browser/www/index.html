@@ -46,25 +46,27 @@
 
 <body>
     <div class="app">
+        <img id="disc" class="stop" src="img/disc.png"/>
+        <img id="play_button" class="button_show" src="img/play.png" />
+        <img id="pause_button" class="button_hide" src="img/pause.png" />
+        <!--<button id="pause_button">pause</button>-->
         <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
+         <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
         </div>
-
         <!-- play pause -->
-        <button id="play_button">play</button>
-
+        <!--<button id="play_button">play</button>-->
         <!-- play pause -->
-        <button id="pause_button">pause</button>
+        <!--<button id="pause_button">pause</button>-->
 
         <audio id="audio" src="audio/track2.mp3" ></audio>
-
-
+        <!--<button id="iscapture", onclick="captureclick()">-->
+            <!--<p>capture</p>-->
+        <!--</button>-->
+        <img id="start_record" class="record_show" src="img/record.png" onclick="startrecord()" />
+        <img id="stop_record" class="record_hide" src="img/stop.png" onclick="stoprecord()" />
         <p id="audio_position"></p>
-        <button id="iscapture", onclick="captureclick()">
-            <p>capture</p>
-        </button>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
