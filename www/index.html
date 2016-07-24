@@ -46,11 +46,40 @@
 
 <body>
     <div class="app">
+        <a id="sidebar" class="show" style="color:#999;"><img id="menuicon" src="img/menuicon.png"/></a>
+        <div id="menulist">
+            <div class="list">
+                <ul class="yiji">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#" class="inactive">Browsing</a>
+                        <ul style="display: none">
+                            <li class="last"><a href="#">Trap</a></li>
+                            <li class="last"><a href="#">East Coast</a></li>
+                            <li class="last"><a href="#">Dirty South</a></li>
+                            <li class="last"><a href="#">Gangsta</a></li>
+                            <li class="last"><a href="#">Hardcore</a></li>
+                            <li class="last"><a href="#">Pasifika</a></li>
+                            <li class="last"><a href="#">Latin</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="inactive">Find me a match</a>
+                        <ul style="display: none">
+                            <li class="last"><a href="#">Freestyler</a></li>
+                            <li class="last"><a href="#">Producer</a></li>
+                        </ul>
+                    </li>
+                    <li class="last"><a href="#">Collaberate</a></li>
+                    <li class="last"><a href="#">Settings</a></li>
+                    <li class="last"><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
         <img id="disc" class="stop" src="img/disc.png"/>
         <img id="play_button" class="button_show" src="img/play.png" />
         <img id="pause_button" class="button_hide" src="img/pause.png" />
         <!--<button id="pause_button">pause</button>-->
-        <h1>PhoneGap</h1>
+        <h1>Collaba Mate</h1>
          <div id="deviceready" class="blink">
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
@@ -67,6 +96,9 @@
         <img id="start_record" class="record_show" src="img/record.png" onclick="startrecord()" />
         <img id="stop_record" class="record_hide" src="img/stop.png" onclick="stoprecord()" />
         <p id="audio_position"></p>
+        <p id="playrecord" onclick="playandstop()">Play Mix</p>
+        <img id="leftimage" src="img/swipeleft.png"/>
+        <img id="rightimage" src="img/swiperight.png"/>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -74,6 +106,7 @@
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>

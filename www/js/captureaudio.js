@@ -31,12 +31,14 @@
 var src = "myrecording.mp3";
 var mediaRec = new Media(src, onSuccess, onError);
 var recstop = false;
+var path = "";
 
 function recordAudio() {
     mediaRec = new Media(src, onSuccess, onError);
 
     // Record audio
     mediaRec.startRecord();
+    path = mediaRec.getCurrentPosition();
 
     // Stop recording after 30 sec
     recTime = 30;
@@ -70,6 +72,24 @@ function stoprecord() {
     mediaRec.stopRecord();
 }
 
+function playandstop(){
+    if (document.getElementById("playrecord").innerHTML == "Play Mix"){
+        playrecord();
+    } else {
+        stopplayrecord();
+    }
+}
+
+function playrecord() {
+    document.getElementById("playrecord").innerHTML = "Stop";
+    mediaRec.play();
+}
+
+function stopplayrecord(){
+    document.getElementById("playrecord").innerHTML = "Play Mix";
+    mediaRec.stop();
+}
+
 // onSuccess Callback
 //
 function onSuccess() {
@@ -79,8 +99,8 @@ function onSuccess() {
 // onError Callback
 //
 function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-        'message: ' + error.message + '\n');
+    // alert('code: '    + error.code    + '\n' +
+    //     'message: ' + error.message + '\n');
 }
 
 // Set audio position

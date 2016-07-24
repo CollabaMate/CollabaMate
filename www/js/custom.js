@@ -13,6 +13,9 @@ document.addEventListener('deviceready', function() {
 
 		    //audio[0].play(); changed based on Sprachprofi's comment below
 		    audio[0].oncanplaythrough = audio[0].play();
+			document.getElementById("play_button").className = 'button_hide';
+			document.getElementById("pause_button").className = 'button_show';
+			document.getElementById("disc").className = 'rotating';
 		    /****************/
 		}
 
@@ -22,13 +25,11 @@ document.addEventListener('deviceready', function() {
 
 	   // User swipes right to indicate interest 
 	  $("body").on("swiperight", function() {
-	  	alert('I love it!');
 	  	change('audio/track3.mp3');
 	  });
 
 	  // User swipes left to indicate disinterest 
 	  $("body").on("swipeleft", function() {
-	  	alert('I hate it!');
 	  	change('audio/track1.mp3');
 	  });
 
