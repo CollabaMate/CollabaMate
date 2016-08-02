@@ -1,2 +1,2 @@
 # CollabaMate
-Mobile application 
+Apache Cordova Mobile Application 
