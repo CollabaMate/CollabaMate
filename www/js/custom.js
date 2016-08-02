@@ -3,7 +3,10 @@ document.addEventListener('deviceready', function() {
 
 	$(function() {
 
-		// function which changes the source url based on swipe
+		//
+		// Changes the audio file based on swipe
+		// TODO: should be changed to pull a soundcloud file using API
+		//
 		function change(sourceUrl) {
 		    var audio = $("#audio");      
 		    audio.attr("src", sourceUrl);
@@ -17,6 +20,27 @@ document.addEventListener('deviceready', function() {
 			document.getElementById("pause_button").className = 'button_show';
 			document.getElementById("disc").className = 'rotating';
 		    /****************/
+		}
+
+		//
+		// Save to the database
+		//
+		function todatabase(url) {
+
+		        // put data into database  
+		        $.ajax({
+		        url: 'http://yourdomain.com/your-data-request.php?foo=bar',
+		        dataType: 'jsonp',
+		        jsonp: 'jsoncallback',
+		        timeout: 5000,
+		        success: function(data, status){
+		            //data loaded
+		        },
+		        error: function(){
+		            //error loading data
+		        }
+		    });
+
 		}
 
 
