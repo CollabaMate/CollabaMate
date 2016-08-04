@@ -1,19 +1,18 @@
 
 
+#app_name{
+	font-size: 50px;
+	margin: 20px 0px 20px -36px;
+}
+
+#deviceready{
+	margin-bottom: 10px;
+}
+
 #swipe{
 	color: black;
 	margin-top: 30px;
 }
-
-/*#pause_button {*/
-	/*margin: 10px auto;*/
-	/*display: none;*/
-/*}*/
-
-/*#play_button {*/
-	/*margin: 10px auto;*/
-	/*display:block;*/
-/*}*/
 
 .button_show {
 	display: block;
@@ -101,14 +100,18 @@ a:link,a:visited{text-decoration: none;}
 
 #leftimage {
 	position: absolute;
-	margin-left: -70%;
+	margin-left: -65%;
+    margin-top: -12%;
+    margin-bottom: 0px;
 	width: 80px;
 	height: 80px;
 }
 
 #rightimage {
 	position: absolute;
-	margin-left: 30%;
-	width: 80px;
-	height: 80px;
+    margin-left: 31%;
+    margin-top: -12%;
+    margin-bottom: 0px;
+    width: 80px;
+    height: 80px;
 }

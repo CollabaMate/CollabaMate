@@ -1,27 +1,9 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
+
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
@@ -40,68 +22,48 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
 
-    <title>Hello World</title>
+
+    <title>Freestyler - Drop an Gem</title>
+
 </head>
 
 <body>
+
     <div class="app">
-        <a id="sidebar" class="show" style="color:#999;"><img id="menuicon" src="img/menuicon.png"/></a>
-        <div id="menulist">
-            <div class="list">
-                <ul class="yiji">
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#" class="inactive">Browsing</a>
-                        <ul style="display: none">
-                            <li class="last"><a href="#">Trap</a></li>
-                            <li class="last"><a href="#">East Coast</a></li>
-                            <li class="last"><a href="#">Dirty South</a></li>
-                            <li class="last"><a href="#">Gangsta</a></li>
-                            <li class="last"><a href="#">Hardcore</a></li>
-                            <li class="last"><a href="#">Pasifika</a></li>
-                            <li class="last"><a href="#">Latin</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="inactive">Find me a match</a>
-                        <ul style="display: none">
-                            <li class="last"><a href="#">Freestyler</a></li>
-                            <li class="last"><a href="#">Producer</a></li>
-                        </ul>
-                    </li>
-                    <li class="last"><a href="#">Collaberate</a></li>
-                    <li class="last"><a href="#">Settings</a></li>
-                    <li class="last"><a href="#">Terms &amp; Conditions</a></li>
-                    <li class="last"><a href="#">Privacy Policy</a></li>
-                    <li class="last"><a href="#">Sign out</a></li>
-                </ul>
-            </div>
-        </div>
 
         <img id="disc" class="stop" src="img/disc.png"/>
         <img id="play_button" class="button_show" src="img/play.png" />
         <img id="pause_button" class="button_hide" src="img/pause.png" />
-        <!--<button id="pause_button">pause</button>-->
-        <h1>Collaba Mate</h1>
-         <div id="deviceready" class="blink">
+
+        <h1 id="app_name"class="aaaiight-fat">Freestyler</h1>
+        <h1 id="symbol" class="rap_icons"></h1>
+
+  <!--       <div id="deviceready" class="blink">
+
             <p class="event listening">Connecting to Device</p>
             <p class="event received">Device is Ready</p>
-        </div>
-        <!-- play pause -->
-        <!--<button id="play_button">play</button>-->
-        <!-- play pause -->
-        <!--<button id="pause_button">pause</button>-->
+
+        </div> -->
+ 
 
         <audio id="audio" src="audio/track2.mp3" ></audio>
-        <!--<button id="iscapture", onclick="captureclick()">-->
-            <!--<p>capture</p>-->
-        <!--</button>-->
+  
         <img id="start_record" class="record_show" src="img/record.png" onclick="startrecord()" />
+
         <img id="stop_record" class="record_hide" src="img/stop.png" onclick="stoprecord()" />
+
         <p id="audio_position"></p>
+
         <p id="playrecord" onclick="playandstop()">Play Mix</p>
+
         <img id="leftimage" src="img/swipeleft.png"/>
+
         <img id="rightimage" src="img/swiperight.png"/>
+
     </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/captureaudio.js"></script>
@@ -112,6 +74,7 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+
 </body>
 
 </html>
